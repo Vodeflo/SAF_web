@@ -82,6 +82,30 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// Home panel wipe-on-scroll behavior
+(function initHomePanelWipe(){
+    const panel = document.querySelector('.home-panel');
+    if (!panel) return;
+    let lastY = window.scrollY;
+
+    function update() {
+        const y = window.scrollY;
+        const hero = document.querySelector('#home');
+        const heroHeight = hero ? hero.offsetHeight : window.innerHeight;
+        // Progress through first 40% of hero height
+        const progress = Math.min(1, Math.max(0, y / (heroHeight * 0.4)));
+        // Direction-aware easing: faster wipe on scroll down, slower restore on up
+        const goingDown = y > lastY;
+        const eased = goingDown ? Math.pow(progress, 0.7) : Math.pow(progress, 1.4);
+        panel.style.setProperty('--wipe', eased.toFixed(4));
+        panel.classList.toggle('wiped', eased > 0.95);
+        lastY = y;
+    }
+
+    update();
+    window.addEventListener('scroll', update, { passive: true });
+})();
+
 // Spotlight cursor tracking
 const spotlightEl = document.querySelector('.spotlight');
 window.addEventListener('mousemove', (e) => {

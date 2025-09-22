@@ -275,6 +275,49 @@ body {
     padding: 0 20px;
 }
 
+/* Home panel: rounded square with wipe/erase animation */
+.home-panel {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    padding: 2.5rem;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.35);
+    position: relative;
+    overflow: clip;
+    /* Smooth disappearance driven by --wipe value (0 → visible, 1 → wiped) */
+    --wipe: 0;
+    clip-path: polygon(
+        0% 0%,
+        calc(100% * (1 - var(--wipe))) 0%,
+        calc(100% * (1 - var(--wipe))) 100%,
+        0% 100%
+    );
+    transition: clip-path 500ms cubic-bezier(0.22, 1, 0.36, 1),
+                transform 500ms cubic-bezier(0.22, 1, 0.36, 1),
+                opacity 500ms ease;
+}
+
+.home-panel::after {
+    /* Soft “sponge” streak following the wipe edge */
+    content: '';
+    position: absolute;
+    top: 0;
+    right: calc(100% * var(--wipe));
+    width: 28px;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(closest-side, rgba(255,255,255,0.08), rgba(255,255,255,0.02) 60%, transparent 80%);
+    filter: blur(6px);
+    transition: right 500ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* When wiped, add a subtle scale/fade */
+.home-panel.wiped {
+    opacity: 0.6;
+    transform: translateY(-6px) scale(0.98);
+}
+
 .hero-text {
     animation: slideInLeft 1s ease-out;
 }
