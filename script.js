@@ -728,3 +728,48 @@ function initCommandPalette() {
 
     searchBtn?.addEventListener('click', openPalette);
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImg');
+  
+    if (!modal || !modalImg) return;
+  
+    // Навешиваем клики на все картинки в галерее
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        // Проверка загрузки картинки
+        if (!img.complete || img.naturalWidth === 0) {
+          console.warn('Картинка не загружена или путь неверный:', img.src);
+        }
+        modalImg.src = img.src;
+        modalImg.alt = img.alt || '';
+        modal.style.display = 'flex';         // показываем модалку
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+  
+    // Закрываем при клике по фону (а не по картинке)
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+  
+    // Закрытие по ESC
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') closeModal();
+    });
+  
+    // Освобождающая функция
+    function closeModal() {
+      modal.style.display = 'none';
+      modal.setAttribute('aria-hidden','true');
+      modalImg.src = '';
+      document.body.style.overflow = '';
+    }
+  
+    // Если где-то в HTML используется closeModal() напрямую — сделаем глобально доступной
+    window.closeModal = closeModal;
+  });
+  

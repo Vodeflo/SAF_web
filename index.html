@@ -203,12 +203,12 @@
                 <div class="testimonial-card">
                     <div class="testimonial-content">
                         <div class="quote-icon">"</div>
-                        <p>The pixel art style is gorgeous and the survival mechanics keep me coming back for more. Every session feels fresh and exciting!</p>
+                        <p>text text text text text text text text text text text text text text text text text text text text text text text text </p>
                         <div class="testimonial-author">
                             <div class="author-avatar">S</div>
                             <div class="author-info">
-                                <h4>SurvivalMaster</h4>
-                                <span>.</span>
+                                <h4>Name</h4>
+                                <span>Description</span>
                             </div>
                         </div>
                     </div>
@@ -237,8 +237,14 @@
                 <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
-    </section>
 
+    </section>
+    <!-- Modal (вынеси за галерею, но в том же HTML-файле) -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+  
     <!-- Gallery Section -->
     <section id="gallery" class="gallery">
         <div class="container">
@@ -246,41 +252,32 @@
             <div class="gallery-grid">
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Gameplay Screenshot 1</p>
-                        <img src="Screenshot3.png" alt="Gameplay Screenshot 1">
-
-                        
+                        <img src="Screenshot3.png" alt="Gameplay Screenshot 1" onclick="openModal(this)">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Building Mechanics</p>
+                        <img src="Build_mehanic.png" alt="Gameplay Screenshot 1" onclick="openModal(this)">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Multiplayer Action</p>
+                        <img src="Multiplayer_action_screenshot.jpg" alt="Gameplay Screenshot 1" onclick="openModal(this)">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Survival Elements</p>
+                        <img src="Survival_element.png" alt="Gameplay Screenshot 1" onclick="openModal(this)">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Pixel Art World</p>
+                        <img src="pirate.jpg" alt="Gameplay Screenshot 1" onclick="openModal(this)">
                     </div>
                 </div>
                 <div class="gallery-item">
                     <div class="gallery-placeholder">
-                        <i class="fas fa-image"></i>
-                        <p>Creative Building</p>
+                        <img src="Egopos_and_building.png" alt="Gameplay Screenshot 1" onclick="openModal(this)">
                     </div>
                 </div>
             </div>
@@ -394,5 +391,20 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+        function openModal(img) {
+          document.getElementById("imageModal").style.display = "block";
+          document.getElementById("modalImg").src = img.src;
+        }
+        function closeModal() {
+          document.getElementById("imageModal").style.display = "none";
+        }
+        </script>
+<!-- Modal: вынести в конец body -->
+    <div id="imageModal" class="modal" aria-hidden="true" style="display:none; align-items:center; justify-content:center;">
+        <button id="modalClose" class="modal-close" aria-label="Close">&times;</button>
+        <img id="modalImg" class="modal-content" src="" alt="">
+    </div>
+  
 </body>
 </html>
