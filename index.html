@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAF - Multiplayer 2D Pixel Sandbox Survival</title>
+    <meta name="description" content="SAF is a multiplayer 2D pixel sandbox survival game with lore, cool mechanics, and endless fun with friends. Build whatever you want!">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="spotlight" aria-hidden="true"></div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h1>SAF</h1>
+            </div>
+            <div class="nav-actions">
+                <button class="nav-search" type="button" aria-label="Search (Ctrl+K)">
+                    <i class="fas fa-search"></i>
+                    <span class="nav-search-placeholder">Search…</span>
+                    <kbd class="nav-kbd">Ctrl K</kbd>
+                </button>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#download" class="nav-link">Download</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#community" class="nav-link">Community</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="pixel-grid"></div>
+            <div class="floating-particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="home-panel hero-text">
+                <h1 class="hero-title">
+                    <span class="title-main">SAF</span>
+                    <span class="title-subtitle">Survive • Build • Thrive</span>
+                </h1>
+                <p class="hero-description">
+                    Experience the ultimate multiplayer 2D pixel sandbox survival adventure. 
+                    Craft your world, survive the elements, and create memories with friends 
+                    in an endless universe of possibilities.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#download" class="btn btn-primary">
+                        <i class="fas fa-download"></i>
+                        Play Now
+                    </a>
+                    <a href="#features" class="btn btn-secondary">
+                        <i class="fas fa-play"></i>
+                        Watch Trailer
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <h2 class="section-title">Game Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Multiplayer Fun</h3>
+                    <p>Team up with friends or compete against others in massive multiplayer worlds. Build together, survive together, and create lasting memories.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>Sandbox Freedom</h3>
+                    <p>Unlimited creativity awaits! Build anything you can imagine - from simple shelters to complex cities. The only limit is your imagination.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Survival Challenge</h3>
+                    <p>Master the art of survival in a challenging pixel world. Gather resources, craft tools, and overcome the elements to thrive.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Rich Lore</h3>
+                    <p>Dive deep into SAF's mysterious world. Uncover ancient secrets, discover hidden stories, and piece together the island's history.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Cool Mechanics</h3>
+                    <p>Experience unique gameplay mechanics that make SAF stand out. From advanced crafting to dynamic weather systems.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Pixel Art Style</h3>
+                    <p>Immerse yourself in beautiful 2D pixel art that brings the world to life. Every pixel crafted with care and attention to detail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modes Section -->
+    <section class="game-modes">
+        <div class="container">
+            <h2 class="section-title">Game Modes</h2>
+            <p class="modes-description">
+                Choose your adventure! SAF offers multiple ways to play and experience the world.
+            </p>
+            <div class="modes-grid">
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Survival Mode</h3>
+                    <p>A regular multiplayer mode where you can play alone or with friends!</p>
+                    <div class="mode-difficulty">
+                        <span class="difficulty-label">Difficulty:</span>
+                        <div class="difficulty-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mode-card">
+                    <div class="mode-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Event Mode</h3>
+                    <p>An event mode that changes with each update (in development).</p>
+                    <div class="mode-difficulty">
+                        <span class="difficulty-label">Difficulty:</span>
+                        <div class="difficulty-stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Players Say</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial-card active">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>I loved this game from the very beginning! Even though the developer is lazy, the game is cool and interesting.</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">G</div>
+                            <div class="author-info">
+                                <h4>Slizik</h4>
+                                <span>Pixel Artist</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>The pixel art style is gorgeous and the survival mechanics keep me coming back for more. Every session feels fresh and exciting!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">S</div>
+                            <div class="author-info">
+                                <h4>SurvivalMaster</h4>
+                                <span>.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <div class="quote-icon">"</div>
+                        <p>I got interested in developing this game not to help, but because I was genuinely passionate about the idea. The game may be rough around the edges, but it's improving, and it will continue to do so!</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">C</div>
+                            <div class="author-info">
+                                <h4>Henry</h4>
+                                <span>Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-controls">
+                <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                </div>
+                <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Screenshots & Gameplay</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Gameplay Screenshot 1</p>
+                        
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Building Mechanics</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Multiplayer Action</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Survival Elements</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Pixel Art World</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-placeholder">
+                        <i class="fas fa-image"></i>
+                        <p>Creative Building</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="section-title">Ready to Play?</h2>
+                <p class="download-description">
+                    Join other players and create with your friends! 
+                    Download SAF now and start your adventure!
+                </p>
+                <div class="download-options">
+                    <a href="https://vodeflo.itch.io/saf" target="_blank" class="download-btn">
+                        <i class="fab fa-itch-io"></i>
+                        <div class="btn-content">
+                            <span class="btn-title">Download on itch.io</span>
+                            <span class="btn-subtitle">Free to Play</span>
+                        </div>
+                    </a>
+                    <div class="download-requirements">
+                        <h4>System Requirements</h4>
+                        <ul>
+                            <li>Windows 10 or later</li>
+                            <li>Internet connection for multiplayer</li>
+                            <li>RAdmin VPN required</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Section -->
+    <section id="community" class="community">
+        <div class="container">
+            <h2 class="section-title">Join the Community</h2>
+            <p class="community-description">
+                Connect with fellow players, share your creations, and stay updated with the latest news and updates.
+            </p>
+            <div class="community-links">
+                <a href="https://t.me/+KhWkvXTfP0JmNTc0" target="_blank" class="community-link">
+                    <i class="fab fa-telegram"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="https://discord.gg/QKehemHmP7" target="_blank" class="community-link">
+                    <i class="fab fa-discord"></i>
+                    <span>Discord Server</span>
+                </a>
+                <a href="https://www.youtube.com/@VodefloDev" target="_blank" class="community-link">
+                    <i class="fab fa-youtube"></i>
+                    <span>YouTube Channel</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SAF</h3>
+                    <p>The ultimate multiplayer 2D pixel sandbox survival experience.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#download">Download</a></li>
+                        <li><a href="#community">Community</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="https://t.me/+KhWkvXTfP0JmNTc0" target="_blank" title="Telegram"><i class="fab fa-telegram"></i></a>
+                        <a href="https://discord.gg/QKehemHmP7" target="_blank" title="Discord"><i class="fab fa-discord"></i></a>
+                        <a href="https://www.youtube.com/@VodefloDev" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 - 2025 SAF Game. All rights reserved. | Made with ❤️ for the gaming community by Vodeflos</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Command Palette -->
+    <div id="command-palette" class="cmdp" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="cmdp-backdrop"></div>
+        <div class="cmdp-panel" role="document">
+            <div class="cmdp-input-wrap">
+                <i class="fas fa-search"></i>
+                <input id="cmdp-input" type="text" placeholder="Search sections and actions…" autocomplete="off" spellcheck="false" />
+                <kbd class="nav-kbd">Esc</kbd>
+            </div>
+            <ul id="cmdp-list" class="cmdp-list" role="listbox">
+                <li data-action="nav:#home" role="option"><i class="fas fa-home"></i><span>Go to Home</span></li>
+                <li data-action="nav:#features" role="option"><i class="fas fa-cube"></i><span>View Features</span></li>
+                <li data-action="nav:#gallery" role="option"><i class="fas fa-image"></i><span>Open Gallery</span></li>
+                <li data-action="nav:#download" role="option"><i class="fas fa-download"></i><span>Go to Download</span></li>
+                <li data-action="nav:#community" role="option"><i class="fas fa-users"></i><span>Join Community</span></li>
+                <li data-action="link:https://vodeflo.itch.io/saf" role="option"><i class="fab fa-itch-io"></i><span>Open itch.io</span></li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
